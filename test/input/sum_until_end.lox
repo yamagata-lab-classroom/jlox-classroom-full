@@ -1,0 +1,7 @@
+var sum = 0;
+var num = read_number();
+while (num != nil) {
+  sum = sum + num;
+  num = read_number();
+}
+print sum; // expect: 6

@@ -1,0 +1,1 @@
+read_string(1); // expect runtime error: Expected 0 arguments but got 1.

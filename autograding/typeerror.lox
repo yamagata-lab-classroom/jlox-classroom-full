@@ -1,0 +1,4 @@
+print 5 div 2.0; // expect runtime error: Operands must be two integers.
+print 5.0 div 2; // expect runtime error: Operands must be two integers.
+print 5.0 % 2; // expect runtime error: Operands must be two integers.
+print 5 % 2.0; // expect runtime error: Operands must be two integers.

@@ -1,0 +1,21 @@
+{
+    // ベースとなるイメージ。多くの言語ツールが入った汎用的なものが便利
+    "image": "mcr.microsoft.com/vscode/devcontainers/java:17",
+
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+        "version": "none",
+        "installMaven": "true",
+        "installGradle": "false"
+    }
+  },
+
+    // VS Codeに自動でインストールさせたい拡張機能
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack"
+            ]
+        }
+    }
+}

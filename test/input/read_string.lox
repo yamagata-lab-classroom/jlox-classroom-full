@@ -1,0 +1,5 @@
+print read_string(); // expect: hello
+var line = read_string();
+print line + "!"; // expect: Lox is fun!
+print read_string(); // expect: 3.14
+print read_string(); // expect: nil

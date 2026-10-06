@@ -1,0 +1,7 @@
+print read_number() + 1; // expect: 43
+print read_number(); // expect: -3.5
+print read_number(); // expect: 12
+print read_number(); // expect: nil
+print read_number(); // expect: nil
+print read_number(); // expect: nil
+print read_number(); // expect: nil

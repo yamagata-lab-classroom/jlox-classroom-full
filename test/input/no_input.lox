@@ -1,0 +1,3 @@
+// 標準入力が空なら、どちらも nil を返す
+print read_string(); // expect: nil
+print read_number(); // expect: nil
