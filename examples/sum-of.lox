@@ -1,0 +1,15 @@
+fun identity(x) {
+  return x;
+}
+fun square(x) {
+  return x * x;
+}
+fun sumOf(g, n) {
+  var total = 0;
+  for (var i = 1; i <= n; i = i + 1) {
+    total = total + g(i);
+  }
+  return total;
+}
+print sumOf(identity, 10);  // 55（1 から 10 までの和）
+print sumOf(square, 10);    // 385（1 から 10 までの 2 乗の和）

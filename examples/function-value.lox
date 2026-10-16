@@ -1,0 +1,6 @@
+fun square(x) {
+  return x * x;
+}
+var f = square;
+print f(3);  // 9
+print f;     // <fn square>

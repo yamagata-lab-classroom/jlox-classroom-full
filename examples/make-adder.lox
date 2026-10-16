@@ -1,0 +1,18 @@
+fun sumOf(g, n) {
+  var total = 0;
+  for (var i = 1; i <= n; i = i + 1) {
+    total = total + g(i);
+  }
+  return total;
+}
+fun makeAdder(n) {
+  fun add(x) {
+    return x + n;
+  }
+  return add;
+}
+var add3 = makeAdder(3);
+var add10 = makeAdder(10);
+print add3(4);          // 7
+print add10(4);         // 14
+print sumOf(add3, 10);  // 85（(2) と組み合わせる）
