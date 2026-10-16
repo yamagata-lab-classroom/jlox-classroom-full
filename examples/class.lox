@@ -1,0 +1,27 @@
+class Breakfast {
+  init(name) {
+    this.name = name;
+  }
+  cook() {
+    print "いい香りがしてきたよ！";
+  }
+  serve() {
+    print this.name + "ができました！";
+  }
+}
+
+class MorningSet < Breakfast {
+  init(name, drink) {
+    super.init(name);
+    this.drink = drink;
+  }
+  serve() {
+    super.serve();
+    print this.drink + "を注ぎます。";
+  }
+}
+
+var set = MorningSet("あんトースト", "コーヒー");
+set.cook();   // いい香りがしてきたよ！
+set.serve();  // あんトーストができました！
+              // コーヒーを注ぎます。
