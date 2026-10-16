@@ -1,9 +1,0 @@
-// Note: This is just for the expression evaluating chapter which evaluates an
-// expression directly.
-print (5 - (3 - 1)) + -1;
-// expect: 2
-print (5.0 - (3 - 1)) + -1 == 2.0;
-// expect: true
-print (5.0 - (3 - 1)) + -1 == 2;
-// expect: false
-
