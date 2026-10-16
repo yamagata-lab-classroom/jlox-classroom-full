@@ -1,0 +1,8 @@
+var count = 0;
+var line = read_string();
+while (line != nil) {
+  count = count + 1;
+  print line;
+  line = read_string();
+}
+print count;

@@ -1,0 +1,7 @@
+print "数を入力してください";
+var num = read_number();
+if (num == nil) {
+  print "数ではありません";
+} else {
+  print num * 2;
+}
