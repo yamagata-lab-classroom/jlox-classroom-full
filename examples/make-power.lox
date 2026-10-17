@@ -1,0 +1,21 @@
+fun sumOf(g, n) {
+  var total = 0;
+  for (var i = 1; i <= n; i = i + 1) {
+    total = total + g(i);
+  }
+  return total;
+}
+fun makePower(n) {
+  fun powerN(x) {
+    var result = 1;
+    for (var i = 0; i < n; i = i + 1) {
+      result = result * x;
+    }
+    return result;
+  }
+  return powerN;
+}
+var power3 = makePower(3);
+print power3(2);                // 8
+print sumOf(power3, 10);        // 3025（1 から 10 までの 3 乗の和）
+print sumOf(makePower(2), 10);  // 385（1 から 10 までの 2 乗の和）
