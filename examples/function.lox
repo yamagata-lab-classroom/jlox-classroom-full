@@ -2,6 +2,7 @@ fun call(name, place) {
   print "私" + name + "。今、" + place + "にいるの";
 }
 call("メリーさん", "あなたの家の前");
+print call("メリーさん", "あなたの後ろ");  // return がないので nil
 
 fun fibonacci(num) {
   var a = 0;
