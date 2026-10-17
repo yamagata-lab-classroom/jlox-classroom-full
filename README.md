@@ -11,25 +11,33 @@
 
 Java 17 と Maven が要ります。Codespaces で開いたときにどちらも入るように、`.devcontainer/` で設定してあります。
 
+まず jlox をコンパイルします。コンパイルしたものは `target/classes` に入ります。
+jlox の Java のコードを書き換えたら、もう一度コンパイルしてください。
+
+```
+mvn compile
+```
+
 Lox のプログラムのファイルを実行する：
 
 ```
-mvn -q compile exec:java -Plox -Dexec.args="examples/fib10.lox"
+java -cp target/classes com.craftinginterpreters.lox.Lox examples/fib10.lox
 ```
 
 ファイルを指定しないと、1行ずつ入力して実行するモード（REPL）になります。Ctrl-D で終わります。
 
 ```
-mvn -q compile exec:java -Plox
+java -cp target/classes com.craftinginterpreters.lox.Lox
 ```
 
 テストを実行する：
 
 ```
-mvn -q test-compile exec:java -Ploxtest -Dexec.args="test"
+mvn test-compile
+java -cp target/classes:target/test-classes io.github.yoriyuki.jlox.LoxTestRunner test
 ```
 
-`-Dexec.args` にはディレクトリかファイルを指定します（`test/input` など）。
+最後の引数にはディレクトリかファイルを指定します（`test/input` など）。
 最後に失敗したテストの数が表示されます。
 `test/scanning/` と `test/expressions/` は、本の途中の段階のインタプリタ向けのテストなので、
 完成版では失敗します（8件）。
